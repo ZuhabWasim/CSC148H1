@@ -1,0 +1,53 @@
+general to do:
+*   - stonehenge game
+*   - stonehenge state
+    - minimax recursive
+    - minimax iterative
+    - rough outcome
+
+-implement stoneheng.py
+    -give it all the methods of the game super class
+        -init
+            -initialize the game with given attributes
+        -get_instructions
+            -give an str of the instructions for the game
+        -is_over
+            -determine if the game state is over
+            -does a player have atlesat 50% of the ley lines?
+        -is_winner
+            -who has the most (or atleast 50%) of the leylines?
+        -str_to_move
+            -translate a str move into a valid usage of str
+    -give all the methods of the state super class
+        -init
+            -initializes all the game state attributes
+        -repr
+            -aswell
+        -str
+            -give a str representation of the state
+        -get_possible_moves
+            -return a list of all the moves you can write
+        -get_current player_name
+            -returns current player name
+            -can inherit it
+        -make_move
+            -update the state with the move made
+            -update the leylines captured
+        -is_valid_move
+            -inherit from the super
+**      -rough_outcome
+            -give a rough estimate (win, loss, tie) that the current player can get
+
+if __name__ == "__main__":
+    from python_ta import check_all
+    check_all(config="a2_pyta.txt")
+
+        @   @
+       /   /
+  @ - A - B   @
+     / \ / \ /
+@ - C - D - E
+     \ / \ / \
+  @ - F - G   @
+       \   \
+        @   @
