@@ -1,0 +1,99 @@
+###################################################################
+########################## Question 1 #############################
+###################################################################
+selection_sort 400 items in 0.009665
+
+selection_sort 800 items in 0.042348
+
+selection_sort 1200 items in 0.087934
+
+selection_sort 1600 items in 0.157044
+
+selection_sort 2000 items in 0.240581
+
+selection_sort 2400 items in 0.342839
+
+############################################
+
+=== profiling selection_sort ===
+         2003 function calls in 0.062 seconds
+
+   Ordered by: call count
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     1000    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+      999    0.060    0.000    0.060    0.000 sort.py:7(find_min)
+        1    0.001    0.001    0.061    0.061 sort.py:34(selection_sort)
+        1    0.000    0.000    0.061    0.061 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.002    0.002    0.062    0.062 {built-in method builtins.exec}
+
+
+
+after changes
+
+selection_sort 400 items in 0.009650
+
+selection_sort 800 items in 0.039790
+
+selection_sort 1200 items in 0.091453
+
+selection_sort 1600 items in 0.165507
+
+selection_sort 2000 items in 0.255822
+
+selection_sort 2400 items in 0.369885
+
+############################################
+
+=== profiling selection_sort ===
+         1004 function calls in 0.068 seconds
+
+   Ordered by: call count
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      999    0.066    0.000    0.066    0.000 sort.py:7(find_min)
+        1    0.001    0.001    0.067    0.067 sort.py:34(selection_sort)
+        1    0.000    0.000    0.067    0.067 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.002    0.002    0.068    0.068 {built-in method builtins.exec}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+
+
+###################################################################
+########################## Question 2 #############################
+###################################################################
+-Pythons functions can rely directly on memory, so there is no need to shift
+ all the elements one over since with linked lists you can just change the pointers of lists
+-insertion sort is faster than selection sort because selection sort is always n^2 time while
+insertion sort can have the chance to not change much of the list at all.
+
+
+###################################################################
+########################## Question 3 #############################
+###################################################################
+-bubblesort will perform similar to selection sort as it will go through the entire list regardless
+-cutting short in the list can be the difference from going to the list a factor of n more times.
+
+
+###################################################################
+########################## Question 4 #############################
+###################################################################
+-updating the list quicker
+-no need to copy the list
+-doesn't wait until the end to copy the list
+
+
+###################################################################
+########################## Question 5 #############################
+###################################################################
+-it would be faster then you wouldn't require much shifting to ensure each element
+-corresponds to the sides of the pivot
+-working in place makes it significantly faster as it doesn't require constant sublists
+
+
+###################################################################
+########################## Question 6 #############################
+###################################################################
+-python's sort can base on memory itself,
+-
